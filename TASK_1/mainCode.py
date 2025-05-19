@@ -32,7 +32,7 @@ def lucas_kanade_optical_flow(prev_gray, new_gray, p0, window_size):
 
 feature_params = dict(maxCorners=3000, qualityLevel=0.2, minDistance=2, blockSize=7)
 
-cap = cv.VideoCapture("video/OPTICAL_FLOW.mp4")
+cap = cv.VideoCapture("Input_Video_Task_1/OPTICAL_FLOW.mp4")
 
 ret, first_frame = cap.read()
 

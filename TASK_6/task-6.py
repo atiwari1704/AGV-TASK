@@ -362,20 +362,20 @@ def plot_3d_points(pts3d):
 
 
 def run_temple_reconstruction():
-    data = np.load("data/intrinsics.npz")
+    data = np.load("Input_Data/intrinsics.npz")
     K1, K2 = data["K1"], data["K2"]
     
-    im1 = cv2.imread("data/im1.png", cv2.IMREAD_GRAYSCALE)
-    im2 = cv2.imread("data/im2.png", cv2.IMREAD_GRAYSCALE)
+    im1 = cv2.imread("Input_Data/im1.png", cv2.IMREAD_GRAYSCALE)
+    im2 = cv2.imread("Input_Data/im2.png", cv2.IMREAD_GRAYSCALE)
     
     M = max(im1.shape)
-    data_pts = np.load("data/some_corresp.npz")
+    data_pts = np.load("Input_Data/some_corresp.npz")
     pts1, pts2 = data_pts["pts1"], data_pts["pts2"]
     
     F = eight_point(pts1, pts2, M)
     print("Fundamental Matrix:", F)
     
-    temple_coords = np.load("data/temple_coords.npz")
+    temple_coords = np.load("Input_Data/temple_coords.npz")
     temple_pts1 = temple_coords["pts1"]
     temple_pts2 = epipolar_correspondences(im1, im2, F, temple_pts1)
     
@@ -384,7 +384,7 @@ def run_temple_reconstruction():
     R_t_candidates = extract_extrinsics(E)
     R, t = select_correct_extrinsics(R_t_candidates, K1, pts1, K2, pts2)
     
-    np.savez("data/extrinsics.npz", R1=R, R2=R, t1=t, t2=-t)
+    np.savez("Input_Data/extrinsics.npz", R1=R, R2=R, t1=t, t2=-t)
     
     P1 = K1 @ np.hstack((np.eye(3), np.zeros((3, 1))))
     P2 = K2 @ np.hstack((R, t.reshape(-1, 1)))

@@ -225,8 +225,8 @@ def get_depth(disparity_map, K1, K2, R1, R2, t1, t2):
 
 def main():
     # Load intrinsic and extrinsic parameters
-    intrinsics = np.load("data/intrinsics.npz")
-    extrinsics = np.load("data/extrinsics.npz")
+    intrinsics = np.load("Input_Data/intrinsics.npz")
+    extrinsics = np.load("Input_Data/extrinsics.npz")
     K1, K2 = intrinsics['K1'], intrinsics['K2']
     R1, R2, t1, t2 = extrinsics['R1'], extrinsics['R2'], extrinsics['t1'], extrinsics['t2']
     
@@ -234,8 +234,8 @@ def main():
     M1, M2, K1p, K2p, R1p, R2p, t1p, t2p = rectify_pair(K1, K2, R1, R2, t1, t2)
     
     # Load stereo images (convert to grayscale)
-    im1 = cv2.imread("data/im1.png", cv2.IMREAD_GRAYSCALE)
-    im2 = cv2.imread("data/im2.png", cv2.IMREAD_GRAYSCALE)
+    im1 = cv2.imread("Input_Data/im1.png", cv2.IMREAD_GRAYSCALE)
+    im2 = cv2.imread("Input_Data/im2.png", cv2.IMREAD_GRAYSCALE)
     
     # Compute disparity map
     dispM = get_disparity(im1, im2, max_disp=64, win_size=5)
@@ -244,8 +244,8 @@ def main():
     depthM = get_depth(dispM, K1, K2, R1, R2, t1, t2)
     
     # Save results
-    np.savez("data/rectify.npz", M1=M1, M2=M2, K1p=K1p, K2p=K2p, R1p=R1p, R2p=R2p, t1p=t1p, t2p=t2p)
-    np.savez("data/depth_results.npz", disparity=dispM, depth=depthM)
+    np.savez("Input_Data/rectify.npz", M1=M1, M2=M2, K1p=K1p, K2p=K2p, R1p=R1p, R2p=R2p, t1p=t1p, t2p=t2p)
+    np.savez("Input_Data/depth_results.npz", disparity=dispM, depth=depthM)
 
     # Display disparity and depth maps
     plt.figure(figsize=(10, 5))

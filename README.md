@@ -6,21 +6,6 @@ This repository contains solutions for selected tasks as part of the AGV (Automa
 
 This project involves implementing software solutions for controlling and managing AGVs. The tasks focus on various aspects of AGV operation, including navigation, task management, and system integration.
 
-## General Instructions
-
-### Docker Setup
-
-This is compulsory for everyone. Read up on basic docker documentation - It will help you in copying local files to the container and do other basic maneuvers. You must do all tasks in the docker container and push them finally for evaluation.
-
-*macOS Setup:*
-- Docker Installation: Install Docker macOS
-- Install XQuartz: Restart your system after installing XQuartz, (reference)
-- Run the Docker Container with GUI Access: `docker run --name agvdocker -e DISPLAY=$(ipconfig getifaddr en0):0 -it agviitkgp/task:24`
-
-*Running Docker:*
-- After the first run, use this command to restart and attach to the container: `docker start -ai agvdocker`
-- Exit the Docker Safely: `exit`
-- VSCode Setup: Refer this link
 
 ## Implemented Tasks
 
@@ -36,9 +21,8 @@ This repository provides solutions for the following tasks:
 
 ### Problem Statement (Subtask 1: CJ NEEDS HELP!: IMPLEMENTING OPTICAL FLOW)
 
-You are expected to implement the Lucas-Kanade sparse optical flow estimation algorithm specified in this article on clips of your choice from this video. You are allowed to use basic OpenCV functions: cv2.imread, cv2.imshow, etc., and you may additionally use cv2.goodFeaturesToTrack. You may refer OpenCV documentation.
+You are expected to implement the Lucas-Kanade sparse optical flow estimation algorithm specified in this article (https://nanonets.com/blog/optical-flow/) on clips of your choice from this video. You are allowed to use basic OpenCV functions: cv2.imread, cv2.imshow, etc., and you may additionally use cv2.goodFeaturesToTrack. You may refer OpenCV documentation.
 
-BONUS: Implement dense Optical Flow estimation algorithm on the video.
 
 ### Solution
 
@@ -70,7 +54,7 @@ The script uses the following video file as input:
 
 ### Problem Statement
 
-Task: Correlative Scan Matching for Localization. The task involves reading and implementing the research paper titled “A 2D-LiDAR- based localization method for indoor mobile robots using correlative scan matching” by Song Du, Tao Chen, Zhonghui Lou, and Yijie Wu (link to the research paper). You will have to implement the localization method using the correlative scan matching (CSM) technique on this dataset.
+Task: Correlative Scan Matching for Localization. The task involves reading and implementing the research paper titled “A 2D-LiDAR- based localization method for indoor mobile robots using correlative scan matching” by Song Du, Tao Chen, Zhonghui Lou, and Yijie Wu (https://www.cambridge.org/core/journals/robotica/article/abs/2dlidarbased-localization-method-for-indoor-mobile-robots-using-correlative-scan-matching/291583763D866B1739AEF58ADC34D659). You will have to implement the localization method using the correlative scan matching (CSM) technique on this dataset (http://ais.informatik.uni-freiburg.de/slamevaluation/datasets/aces.clf).
 
 SUBTASK 1: Use the dataset above with the noise parameters of your choice to localize the agent on this map (use OpenCV to replace green pixels with white ones).
 SUBTASK 2: Utilize this solution to estimate better noise parameters and provide your rationale for doing so.

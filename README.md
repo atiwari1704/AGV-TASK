@@ -57,6 +57,7 @@ The script uses the following video file as input:
 Task: Correlative Scan Matching for Localization. The task involves reading and implementing the research paper titled “A 2D-LiDAR- based localization method for indoor mobile robots using correlative scan matching” by Song Du, Tao Chen, Zhonghui Lou, and Yijie Wu (https://www.cambridge.org/core/journals/robotica/article/abs/2dlidarbased-localization-method-for-indoor-mobile-robots-using-correlative-scan-matching/291583763D866B1739AEF58ADC34D659). You will have to implement the localization method using the correlative scan matching (CSM) technique on this dataset (http://ais.informatik.uni-freiburg.de/slamevaluation/datasets/aces.clf).
 
 SUBTASK 1: Use the dataset above with the noise parameters of your choice to localize the agent on this map (use OpenCV to replace green pixels with white ones).
+
 SUBTASK 2: Utilize this solution to estimate better noise parameters and provide your rationale for doing so.
 
 ### Solution
@@ -94,7 +95,7 @@ Key features:
 
 ### Problem Statement
 
-Task: This task requires you to construct 3D representation of surroundings from multiple view images. A detailed description of the concept behind the task and how you are expected to tackle it are given in the Link. All the required data is also given in the above link.
+Task: This task requires you to construct 3D representation of surroundings from multiple view images. A detailed description of the concept behind the task and how you are expected to tackle it are given in the Link. All the required data is also given in the link (https://drive.google.com/drive/folders/1orQVS0M1EvUs7I_R0d2-KAedNLS0zhIk).
 
 ### Solution
 

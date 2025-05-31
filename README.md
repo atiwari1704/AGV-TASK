@@ -1,6 +1,6 @@
 # AGV Task Solutions
 
-This repository contains solutions for selected tasks as part of the AGV (Automated Guided Vehicle) project.
+This repository contains solutions for selected tasks as part of the AGV (Autonomous Ground Vehicle) tasks.
 
 ## Project Overview
 

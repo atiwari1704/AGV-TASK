@@ -12,11 +12,6 @@ This project involves implementing software solutions for controlling and managi
 
 This is compulsory for everyone. Read up on basic docker documentation - It will help you in copying local files to the container and do other basic maneuvers. You must do all tasks in the docker container and push them finally for evaluation.
 
-*Windows Setup:*
-- Docker Installation: Install Docker Windows
-- Install VcXsrv: VcXsrv is an X server that enables GUI applications from a Docker container to be displayed on Windows. Launch XLaunch and configure it with the default suggested options to start the X server.
-- Run the Docker Container with GUI Access: `docker run --name agvdocker -e DISPLAY=host.docker.internal:0 -it agviitkgp/task:24`
-
 *macOS Setup:*
 - Docker Installation: Install Docker macOS
 - Install XQuartz: Restart your system after installing XQuartz, (reference)
@@ -26,25 +21,6 @@ This is compulsory for everyone. Read up on basic docker documentation - It will
 - After the first run, use this command to restart and attach to the container: `docker start -ai agvdocker`
 - Exit the Docker Safely: `exit`
 - VSCode Setup: Refer this link
-
-### General Guidelines
-
-- Make your programs Object Oriented if possible, although this is not a requirement.
-- You are expected to maintain proper documentation in notion for each task even if you are not able to complete them.
-- The resources given are not sufficient and you are expected to find more on your own.
-- You may discuss among yourselves and help each other, but sharing your code is a strict no. The use of plagiarized code will result in complete and immediate disqualification for both candidates, from whom the code has been copied and who have copied it.
-- For the tasks that require it, you can visualize the path or data using Matplotlib or OpenCV.
-- Participants may utilize any resources – including AI tools (LLMs), books, or videos – provided they fully document all sources and demonstrate understanding of their application.
-- Don’t hesitate to contact any of us in case of any obstacles.
-- We have allotted the time with sufficient consideration for various factors and hence cannot give any extension to anyone as it would be extremely unfair to the rest of the candidates
-
-### Academic Integrity
-
-You may discuss among yourselves and help each other, but sharing your code is a strict no. The use of plagiarized code will result in complete and immediate disqualification for both candidates, from whom the code has been copied and who have copied it. Participants may utilize any resources – including AI tools (LLMs), books, or videos – provided they fully document all sources and demonstrate understanding of their application.
-
-### A Word of Advice
-
-You are expected to do at least one task, but you are encouraged to do more - this will increase your chances of getting selected and will also help you explore your interests in different fields we work on and get a general idea.
 
 ## Implemented Tasks
 
